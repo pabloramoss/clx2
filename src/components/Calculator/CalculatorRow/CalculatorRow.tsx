@@ -1,10 +1,8 @@
-import React from 'react';
-
-import RadioButtonCheckedIcon from '../../../assets/RadioButtonCheckedIcon';
-import RadioButtonUncheckedIcon from '../../../assets/RadioButtonUncheckedIcon';
-import TrashIcon from '../../../assets/TrashIcon';
-import PlusIcon from '../../../assets/PlusIcon';
-import MinusIcon from '../../../assets/MinusIcon';
+import RadioButtonCheckedIcon from '@/assets/RadioButtonCheckedIcon';
+import RadioButtonUncheckedIcon from '@/assets/RadioButtonUncheckedIcon';
+import TrashIcon from '@/assets/TrashIcon';
+import PlusIcon from '@/assets/PlusIcon';
+import MinusIcon from '@/assets/MinusIcon';
 
 interface Props {
   sign: string;
@@ -29,6 +27,7 @@ const CalculatorRow: React.FC<Props> = ({
     <div className={`calculator-row ${enabled ? '' : 'disabled'}`}>
       <div className={`calculator-row__wrapper ${enabled ? '' : 'disabled'}`}>
         <input
+          autoFocus
           aria-label="Value"
           className="calculator-row__input"
           disabled={!enabled}

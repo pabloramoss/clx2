@@ -1,6 +1,6 @@
-import { Sign } from '../../../types';
-
 import CalculatorRow from './CalculatorRow';
+
+import { Sign } from '@/types';
 
 interface Props {
   id: number;
@@ -26,10 +26,9 @@ const CalculatorRowContainer: React.FC<Props> = ({
   calculateTotal,
 }) => {
   const handleValueChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const inputValue = event.target.value;
-    const newValue = inputValue !== '' ? parseInt(inputValue) : 0;
+    const inputValue = parseInt(event.target.value);
 
-    onValueChange(id, newValue);
+    onValueChange(id, inputValue);
   };
 
   const handleSignChange = () => {

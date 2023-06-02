@@ -1,6 +1,6 @@
-import { IRow, Sign } from '../../types';
-
 import CalculatorRow from './CalculatorRow';
+
+import { IRow, Sign } from '@/types';
 
 interface Props {
   rows: IRow[];
@@ -43,7 +43,9 @@ const CalculatorContainer: React.FC<Props> = ({
         <button aria-label="Add Row" onClick={onAddRow}>
           Add Row
         </button>
-        <p className="calculator-result">Result: {result}</p>
+        <p aria-label="Result" className="calculator-result">
+          Result: {result}
+        </p>
       </div>
     </div>
   );

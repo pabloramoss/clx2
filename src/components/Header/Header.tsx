@@ -3,7 +3,7 @@ const Header: React.FC = () => {
     <div className="header">
       <h1>Coolshop React Challenge</h1>
       <p>by Pablo Ramos</p>
-      <a href="" target="_blank">
+      <a href="https://github.com/pabloramoss/clx2/blob/master/README.md" target="_blank">
         Readme
       </a>
     </div>

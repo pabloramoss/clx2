@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
-import { IRow, Sign } from '../../types';
-
 import Calculator from './Calculator';
+
+import { IRow, Sign } from '@/types';
 
 const CalculatorContainer: React.FC = () => {
   const [rows, setRows] = useState<IRow[]>([
@@ -52,13 +52,19 @@ const CalculatorContainer: React.FC = () => {
   };
 
   const calculateTotal = () => {
-    return rows.reduce((sum, row) => {
-      if (row.enabled) {
-        return sum + (row.sign === '+' ? row.value : -row.value);
+    const total = rows.reduce((sum, row) => {
+      const { value, enabled, sign } = row;
+
+      if (enabled) {
+        if (!isNaN(value)) {
+          return sum + (sign === '+' ? value : -value);
+        }
       }
 
       return sum;
     }, 0);
+
+    return total;
   };
 
   return (

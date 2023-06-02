@@ -9,6 +9,10 @@ Accessibility was a priority in the development of this application. To ensure a
 - Usage of **`aria-label`** attributes: By providing appropriate **`aria-label`** values, the app becomes more accessible for screen readers and assistive technologies.
 - Utilization of buttons for enhanced keyboard navigation: The app can be fully operated without a mouse by utilizing the **`focus`** feature on buttons.
 
+### **Unit Testing**
+
+To ensure code quality and maintainable components, unit testing was implemented using **Vitest** and **React Testing Library**. This approach helps identify and prevent potential issues and regressions during the development process.
+
 ### **TypeScript**
 
 The application is built using **TypeScript**. TypeScript brings several advantages to the development process, including: static typing, autocompletion, documentation, etc.
